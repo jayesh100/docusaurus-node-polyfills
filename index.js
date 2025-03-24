@@ -3,7 +3,7 @@ const { ProvidePlugin } = require('webpack')
 
 class ESMPolyfillWrapper {
   apply(compiler) {
-    compiler.options.plugins.push(new ProvidePlugin({
+    compiler.options.plugins.push(new compiler.webpack.ProvidePlugin({
       process: "process/browser.js"
     }))
 
